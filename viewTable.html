@@ -1,0 +1,22 @@
+<div>
+<table class="table table-bordered">
+  <tr>
+  <th>NAME</th>
+  <th>EMAIL</th>
+  <th>PHONE</th>
+  <th>IMAGE</th>
+  <th colspan="2">EDIT</th>
+  </tr>
+  <tr ng-repeat="item in td">
+    <td>{{ item.name }}</td>
+    <td>{{ item.email }}</td>
+    <td>{{ item.phone }}</td>
+    <td><img src="{{item.image}}"  height = 100px width = 100px alt = "IMAGE"></td>
+    <td><input type="button" ng-click='deleteRow($index)' value="x"></td>
+    <td><input type="button" ng-click='updateRow($index)' value="update"></td>
+  </tr>
+</table>
+</div>
+<input type="button" ng-click='save()' value="SAVE">
+<input type="button" ng-click='delete()' value="DELETE">
+</div>
